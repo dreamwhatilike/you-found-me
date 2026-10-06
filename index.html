@@ -1,0 +1,38 @@
+html
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>you found me!</title>
+    <style>
+        body, html { margin: 0; padding: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; background-color: #f0f0f0; }
+        img { max-width: 100%; max-height: 100%; object-fit: contain; }
+    </style>
+</head>
+<body>
+
+    <img id="random-img" src="" alt="隨機圖片">
+
+    <script>
+        // 1. 在這裡放入你想隨機顯示的圖片網址清單
+        const images = [
+            "https://i.meee.com.tw/gUGs6dT.png",
+            "https://i.meee.com.tw/WMJCOjC.png",
+            "https://i.meee.com.tw/MSLDjoz.png",
+            "https://i.meee.com.tw/f62h3Z6.png",
+            "https://i.meee.com.tw/lX0FHI8.png",
+            "https://i.meee.com.tw/rAzmdO1.png",
+            "https://i.meee.com.tw/caQiD7g.png",
+            "https://i.meee.com.tw/AlXaV2V.png",
+            "https://i.meee.com.tw/kATaNFC.png",
+        ];
+
+        // 2. 隨機挑選一張
+        const randomIndex = Math.floor(Math.random() * images.length);
+        
+        // 3. 將圖片塞入網頁中
+        document.getElementById("random-img").src = images[randomIndex];
+    </script>
+</body>
+</html>
